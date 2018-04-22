@@ -1,0 +1,15 @@
+<html>
+<title>You can edit the menu item here!</title>
+<!--<script language="javascript" src = "{{url_for('static', filename = 'js/flaskJquery.js')}}"> -->
+<script type="text/javascript" src = "/static/js/myjs.js" ></script>
+
+<link rel= stylesheet type= text/css href= "{{ url_for('static' , filename='styles.css') }}">
+</script>
+<body class="pane">
+	<h1 class="header">Edit Menu Item</h1>
+	<form method = 'POST' action ="{{url_for('editMenuItem', restaurant_id = restaurant_id , menu_id = item.id)}}">
+		<h2>Name:</h2></br>
+		<input class = "default-value" type ='text' name='newMenuItemName' placeholder= '{{ item.name }}'> <input type="submit" name="Edit" value="Rename"><a href = "{{url_for('restaurantMenu', restaurant_id = restaurant_id)}}" > Cancel </a>
+	</form>
+</body>
+</html>

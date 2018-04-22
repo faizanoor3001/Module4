@@ -1,0 +1,54 @@
+<!doctype>
+<html>
+<title>Create a new menu item</title>
+<link rel= stylesheet type= text/css href= "{{ url_for('static' , filename='styles.css') }}">
+<body class = "pane">
+<form method = 'POST' action = "{{ url_for('newMenuItem' , restaurant_id = restaurant_id ) }}" >
+<h2 class ="header">Create a new Menu Item </h2>
+<data class = "align">
+	<name>
+		<label class = "label" for='name'>Name</label>
+		</br>
+		<input  name ='name' id ='name' type = 'text'>
+	</name>
+</br>
+	<description>
+		<label class = "label" for='description'>Description</label>
+		</br>
+		<input  name ='description' id ='description' type = 'text'>
+	</description>
+</br>
+	<price>
+		<label class = "label" for='price'>Price</label>
+		</br>
+		<input  name ='price' id ='price' type = 'text'>
+	</price>
+</br>
+	<course>
+		<label class = "label" for='course'>Course</label>
+		</br>
+		<input  name ='course' id ='course1' type = 'radio' value="small">
+		<label class = "label" for='course1'>Appetiser</label>
+		</br>
+		<input  name ='course' id ='course2' type = 'radio' value="small">
+		<label class = "label" for='course2'>Entree</label>
+		</br>
+		<input  name ='course' id ='course3' type = 'radio' value="small">
+		<label class = "label" for='course3'>Dessert</label>
+		</br>
+		<input  name ='course' id ='course4' type = 'radio' value="small">
+		<label class = "label" for='course4'>Beverage</label>
+	</course>
+</br>	
+</br>
+	<add>
+		<input value='create' type = 'submit'>
+		</br>
+		<a href = "{{ url_for('restaurantMenu' , restaurant_id = restaurant_id)}}">
+		Cancel</a>
+	</add>
+</data>
+</form>
+</body>
+</html>
+				
