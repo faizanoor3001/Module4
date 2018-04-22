@@ -1,0 +1,30 @@
+<html>
+<title>Create a new menu item</title>
+<body>
+<form method = 'POST' action = "{{ url_for('newMenuItem' , restaurant_id = restaurant_id ) }}" >
+<h2>Create a new menu item, and enter the following details below</h2>
+	<table>
+		<tr>
+			<td><label for='name'>Name</label></td>
+			<td><input  name ='name' id ='name' type = 'text'></td>
+		</tr>
+		<tr>
+			<td><label for='course'>Course</label></td>
+			<td><input  name ='course' id ='course' type = 'text'></td>
+		</tr>
+		<tr>
+			<td><label for='description'>Description</label></td>
+			<td><input  name ='description' id ='description' type = 'text'></td>
+		</tr>
+		<tr>
+			<td><label for='price'>Price</label></td>
+			<td><input  name ='price' id ='price' type = 'text'></td>
+		</tr>
+		<tr>
+			<td><input value='create' type = 'submit'></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
+				
